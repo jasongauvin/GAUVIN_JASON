@@ -9,10 +9,11 @@ import (
 
 // Customer type is the structure of the users that we will store in the database
 type Customer struct {
-	ID             string `gorm:"primary_key"`
+	ID             uint64 `gorm:"primary_key"`
 	Name           string `gorm:"size:255"`
 	Email          string `gorm:"size:255; unique"`
 	HashedPassword string
+	Role           string `gorm:"size:255"`
 }
 
 // CustomerForm is the struct used to login or register
@@ -20,6 +21,7 @@ type CustomerForm struct {
 	Name     string `gorm:"size:255"`
 	Email    string `gorm:"size:255"`
 	Password string `gorm:"size:255"`
+	Role     string `gorm:"size:255"`
 }
 
 // ValidateCustomer takes a user as parameter and check if its properties are valid

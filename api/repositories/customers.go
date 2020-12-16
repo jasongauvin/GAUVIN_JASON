@@ -3,8 +3,8 @@ package repositories
 import (
 	"errors"
 
-	"github.com/jasongauvin/gogoleplate/api/database"
-	"github.com/jasongauvin/gogoleplate/api/models"
+	"github.com/jasongauvin/GAUVIN_JASON/api/database"
+	"github.com/jasongauvin/GAUVIN_JASON/api/models"
 	"github.com/jinzhu/gorm"
 )
 
@@ -16,9 +16,9 @@ func CreateCustomer(customer *models.Customer) error {
 	return nil
 }
 
-// FindCustomerByEmail finds a customer in the db thanks to its email
+// FindCustomerByEmail finds a customer in the db
 func FindCustomerByEmail(customer *models.Customer) error {
-	err := database.DB.Debug().Save(&customer).Take(&customer).Error
+	err := database.DB.Debug().Where("email = ?", customer.Email).First(&customer).Error
 	if err != nil {
 		return  err
 	}
