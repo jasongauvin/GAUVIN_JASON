@@ -91,5 +91,13 @@ func ValidateSliderForm(sliderForm *SliderForm) error {
 		return errors.New("Name of slider is empty")
 	}
 
+	if sliderForm.Min >= sliderForm.Max {
+		return errors.New("Attention, min is greater than max")
+	}
+
+	if sliderForm.Min != sliderForm.Max {
+		return errors.New("Attention, min is equal to max")
+	}
+
 	return nil
 }

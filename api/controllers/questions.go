@@ -58,10 +58,15 @@ func CreateQuestion(c *gin.Context) {
 	value := question.Type
 	switch value {
 	case "multichoice":
-		fmt.Print("YEAH")
+
 		choiceList := questionForm.MultiChoiceForm
 		for _, choice := range choiceList {
-			fmt.Print("CHOICE")
+			// Check multichoice
+			err = models.ValidateMultiChoiceForm(&choice)
+			if err != nil {
+				c.JSON(http.StatusBadRequest, err.Error())
+				return
+			}
 			choice := models.MultiChoice{
 				Question: question,
 				Name:     choice.Name,
@@ -75,6 +80,13 @@ func CreateQuestion(c *gin.Context) {
 		}
 
 	case "slider":
+		// Check slider
+		err = models.ValidateSliderForm(&questionForm.SliderForm)
+		if err != nil {
+			c.JSON(http.StatusBadRequest, err.Error())
+			return
+		}
+
 		slider := models.Slider{
 			Question: question,
 			Min:      questionForm.SliderForm.Min,
