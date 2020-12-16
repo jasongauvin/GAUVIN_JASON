@@ -59,4 +59,4 @@ the available routes are the following :
 
 | route                       | method | description                       | params          | response                |
 | --------------------------- | ------ | --------------------------------- | --------------- | ----------------------- |
-| `/hello`                      | GET    | check if the api is available     | none            | `Hello world!`          |
+| `/hello`                    | GET    | check if the api is available     | none            | `Hello world!`          |
