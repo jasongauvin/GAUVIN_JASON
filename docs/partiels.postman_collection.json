@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "917dad06-2e1f-472a-afc8-4623154928ba",
+		"name": "partiels",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Jason\",\n    \"email\": \"contact.jason.gauvin@gmail.com\",\n    \"password\": \"Azertyup123\",\n    \"role\": \"USER_ROLE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Jason\",\n    \"email\": \"contact.jason.gauvin@gmail.com\",\n    \"password\": \"Azertyup123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/form",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImNvbnRhY3QuamFzb24uZ2F1dmluQGdtYWlsLmNvbSIsImV4cCI6MTYwODEyNTI1Mn0.blyoYwJwLXl9U1lPcHk9XV7qB_Ram5Ef7cIX0GHf1N2gP3dhS3wyY5aFJJWucANJE46Sqn-5weCClF_Kr0ZET0744E2sC4dYohYiyh7k6vVNABA1h7R9UXiv0jKP06QTZWeUxjKZrymiEMgnm2GrUqB1S-jBeZIT2qT8vDfZ4nylpXXR-SxmIupL16aaYCGRw0MAkvAwwDPpp7oWxVBbsz_8EuhwJTvmx5FDEQkLLWudn3a42qTLOI24wJk87QUHE_hSTMUWXAoARHW_2tsd2DqIZrcim-sHW6XpbLnIVZzmgK1zBogeeJsovyyNe63mc58q3UPbdDNFcqqEBzL3aw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Quiz 3: Suçons des moules!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/form",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"form"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/form/4/question",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImNvbnRhY3QuamFzb24uZ2F1dmluQGdtYWlsLmNvbSIsImV4cCI6MTYwODEzNTQwOX0.WSkLWNoqmfDacXeTpqtVGDliJq2jAqlBaVu2_50omPat3zeNBgTLwmZpwVuZeBVhhpJQLS0ECPl1FfqbMRSld7mN6U91q_q7_tA0gXOIjbF7IoWlZ5HSE6MCrOziTWB3XXsKXEPa_eNV9SXD54YyuMX3966uVqaUEFCqIQ_IT7uym7bty09ttLxRceLWydtkA_fce22NhbLjtf-NOa8fEXSdqeQcZpRwbP1NJn12lHEvL5gGZDWP-V-P7WBXwVA_ETI_kSur6ltx52fzakOGQw4FHH-kjguiDK24YEZopPvTMR3YspL6XqGFfoRttMgVI4R2gg6r3llPBo7XQMnyFQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Plutot du matin ou du soir ?\",\n    \"type\": \"slider\",\n    \"sliderform\": \n        {\n            \"min\": 1,\n            \"max\": 10\n            }\n\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/form/4/question",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"form",
+						"4",
+						"question"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/form/3/question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Plutot du matin ou du soir ?\",\n    \"type\": \"slider\",\n    \"sliderform\": \n        {\n            \"min\": 1,\n            \"max\": 10\n            }\n\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/form/3/question",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"form",
+						"3",
+						"question"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

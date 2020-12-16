@@ -1,11 +1,30 @@
-# Gogoplate
+# Partial of Software Architecture and Back Development. 
 
-This is the repository made with golang.
+This is based on my template repository "gogoleplate" made for golang.
 -   hot reload with air 
 -   postgres database
 -   github configuration
 -   uses conventions
+-   JWT
+-   Authorization API
 
+It is available at the following address : https://github.com/jasongauvin/gogoleplate
+
+This application must make with an API, to manage questionnaires with the possibility of resuming lessons and saving their progress. User and administrator accounts must be usable with authentication and authorization. 
+
+## Todo
+
+- [x] Docker
+- [x] Documentation
+- [x] JWT
+- [x] Autorisation
+- [x] Saving progress
+- [x] Customers controller
+- [x] Forms controller
+- [x] Questions controller
+- [x] Types Controller
+- [ ] Answers controller
+- [ ] Unit test
 ## Requirements
 
 To run this project you'll need to have docker and yarn installed on your machine.
@@ -14,6 +33,8 @@ If you want to develop on this project it's recommended to have `golang` install
 ## Project setup
 
 First you need to created your `.env` file (you can use the .env.dist file).
+You will placed at the root of your project : `public.pem` and `private.pem`
+
 
 ```sh
   docker-compose up --build
@@ -32,7 +53,7 @@ You will need 2 files placed at the root of your project : `public.pem` and `pri
 
 If you want to contribute to the project you'll need to name your commits according to the following convention :
 
-    type (optional scope): description.
+    type: description.
 
 The following types are available :
 
@@ -52,11 +73,3 @@ The branch should have a name that reflects it's purpose.
 The convention is to prefix the branch name with `feature-`. All the words must be separated by a `-`.
 
 Branch name example : `feature-user-authentication`
-
-## Routes
-
-the available routes are the following :
-
-| route                       | method | description                       | params          | response                |
-| --------------------------- | ------ | --------------------------------- | --------------- | ----------------------- |
-| `/hello`                    | GET    | check if the api is available     | none            | `Hello world!`          |
