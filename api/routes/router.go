@@ -20,6 +20,7 @@ func InitializeRoutes(r *gin.Engine) {
 
 	{
 		api.POST("/form", controllers.CreateForm)
+		api.POST("/form/:id/question", controllers.CreateQuestion)
 
 	}
 }
