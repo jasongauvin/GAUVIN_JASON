@@ -6,8 +6,8 @@ import (
 	"github.com/caarlos0/env/v6"
 	"github.com/gin-gonic/gin"
 	cors "github.com/itsjamie/gin-cors"
-	"github.com/jasongauvin/gogoleplate/api/database"
-	"github.com/jasongauvin/gogoleplate/api/routes"
+	"github.com/jasongauvin/GAUVIN_JASON/api/database"
+	"github.com/jasongauvin/GAUVIN_JASON/api/routes"
 )
 
 func main() {

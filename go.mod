@@ -1,8 +1,9 @@
-module github.com/jasongauvin/gogoleplate
+module github.com/jasongauvin/GAUVIN_JASON
 
 go 1.15
 
 require (
+	github.com/JackMaarek/spiderMail v0.0.0-20201014151217-c45a62f2abbf
 	github.com/asaskevich/govalidator v0.0.0-20200907205600-7a23bdc65eef
 	github.com/badoux/checkmail v1.2.1
 	github.com/caarlos0/env/v6 v6.3.0

@@ -1,9 +1,9 @@
 package database
 
 import (
-	"github.com/jasongauvin/gogoleplate/api/models"
+	"github.com/jasongauvin/GAUVIN_JASON/api/models"
 )
 
 func MakeMigrations() {
-	DB.AutoMigrate(&models.Customer{})
+	DB.AutoMigrate(&models.Customer{}, &models.Form{})
 }
